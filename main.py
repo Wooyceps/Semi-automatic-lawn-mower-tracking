@@ -3,7 +3,7 @@ import plotly.offline as go_offline
 import plotly.graph_objects as go
 
 # READING AND PARSING THE DATA
-file = open('F:/3D_Terrain/survey_data.csv', 'r')
+file = open('data.csv', 'r')
 lines = file.readlines()
 n_line = len(lines)
 x = []
@@ -100,4 +100,4 @@ fig = go.Figure()
 fig.add_trace(go.Surface(z=z_head, x=x_idw_list, y=y_idw_list))
 fig.update_layout(
     scene=dict(aspectratio=dict(x=2, y=2, z=0.5), xaxis=dict(range=[x_min, x_max], ), yaxis=dict(range=[y_min, y_max])))
-go_offline.plot(fig, filename='F:/3D_Terrain/3d_terrain.html', validate=True, auto_open=False)
+go_offline.plot(fig, filename='C:/Moje pliki/uczelnia/kolo_naukowe_AIMETH/Semi-automatic-lawn-mower-tracking/data.html', validate=True, auto_open=False)
